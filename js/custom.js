@@ -43,7 +43,7 @@ $(document).ready(function () {
 
         $("#upload_bg").hide();
         $(this).hide();
-        $("#social_share").show();
+        //$("#social_share").show();
         $("#start_over").show();
         var _name = $("#name").val();
         var _skill = $("#skill").val();
@@ -69,12 +69,11 @@ $(document).ready(function () {
                     data: userImage,
                     contentType: 'application/json',
                     success: function (res) {
-                        var pinterestHref = "http://pinterest.com/pin/create/button/?url=http://localhost:3000/index;&media=http://localhost:3000/loadImage?imageid=" + res.imageDetail.imageId; //&description={optional URI-encoded description}";
+                        var pinterestHref = "http://pinterest.com/pin/create/button/?url=http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId + ";&media=http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId; //&description={optional URI-encoded description}";
                         $("#pinterest-share-link").attr("href", pinterestHref);
-                        $("#fb-share-link").attr("data-fburl", "http://localhost:3000/loadImage?imageid=" + res.imageDetail.imageId);
+                        $("#fb-share-link").attr("data-fburl", "http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId);
                         $("#social_share").show();
-
-
+                        //$("#start_over").show();
                     },
                     error: function (err) {
                         console.log(err);
@@ -103,9 +102,9 @@ $(document).ready(function () {
     }
 
     $("#fb-share-link").click(function () {
-        //var shareURL = $(this).data('fburl');
+        var shareURL = $(this).attr("data-fburl");
         //postCanvasToFacebook(shareURL);
-        console.log($(this).data('fburl'));
+        console.log(shareURL);
         FB.ui({
             method: 'share',
             href: shareURL
@@ -146,6 +145,9 @@ $(document).ready(function () {
             contentType: 'application/json',
             success: function (res) {
                 console.log(res);
+                $("#myModal").modal("show");
+                $("#to_email_address").val("");
+                $("#myModal2").modal("hide");
             },
             error: function (err) {
                 console.log(err);

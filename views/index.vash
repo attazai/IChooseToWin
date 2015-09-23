@@ -188,7 +188,7 @@
                                         </a>
                                     </li>
                                     <li><a id="fb-share-link" href="javascript:void(0)" data-fburl="" ><i class="fa fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    @*<li><a href="#"><i class="fa fa-instagram"></i></a></li>*@
                                     <li><a href="#"><i id="show_email_modal" class="fa fa-envelope"></i></a></li>
                                 </ul>
                                 <a class="btn btn-default btn-block" href="javascript:void(0)" id="upload_bg"><i class="custom-icon camera"></i> upload a photo</a>

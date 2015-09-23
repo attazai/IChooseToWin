@@ -37,8 +37,8 @@ var userImageObj = require("./models/userImages.js");
 var uuid = require('node-uuid');
 
 var server = http.createServer(app);
-server.listen(3000);
-
+//server.listen(3000);
+server.listen(process.env.PORT || 3000);
 var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
