@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="lpapp">
+<head>
+
+    <title>@model.title</title>
+                                                            
+    @html.block("style", function(model){
+       
+    })
+</head>
+  
+    @html.block("body",function(model){
+        <body ng-controller="ProductsController" ng-init="productId=@model.productID">            
+
+            <div>
+                <img style='display:block; width:400px;height:400px;' id='base64image' ng-src='@model.imageData' />
+            </div>
+          
+        </body>
+    })
+    
+    @html.block("scripts", function(model){
+	})
+    
+</html>
