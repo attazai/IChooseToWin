@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="lpapp">
+<html>
 <head>
 
 <title>@model.title</title>
@@ -20,7 +20,7 @@
         <body>
             <div id="fb-root"></div>
             <script>
-            console.log("initializing FB");
+                console.log("initializing FB");
                 window.fbAsyncInit = function() {
                 FB.init({
                 appId : '1638209386449579',

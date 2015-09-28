@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="lpapp">
+<html ng-app="ic2w">
 <head>
 
     <title>@model.title</title>
@@ -10,16 +10,18 @@
 </head>
   
     @html.block("body",function(model){
-        <body ng-controller="ProductsController" ng-init="productId=@model.productID">            
+        <body ng-controller="ViewImageController">            
 
             <div>
-                <img style='display:block; width:400px;height:400px;' id='base64image' ng-src='@model.imageData' />
+                <img style='display:block; width:400px;height:400px;' id='base64image' ng-src='{{imageData}}' />
             </div>
           
         </body>
     })
     
     @html.block("scripts", function(model){
+     <script src="js/lib/angular/angular.min.js"></script>
+     <script src="js/viewimage-controller.js"></script>
 	})
     
 </html>

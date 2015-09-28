@@ -39,6 +39,7 @@ var uuid = require('node-uuid');
 var server = http.createServer(app);
 //server.listen(3000);
 server.listen(process.env.PORT || 3000);
+
 var smtpTransport = nodemailer.createTransport({
     service: "Gmail",
     auth: {
@@ -88,23 +89,49 @@ app.post("/saveImageToDb", function (req, res) {
 });
 
 app.get("/loadImage", function (req, res) {
-    var _imageId = req.query.imageid;
-    console.log(_imageId);
+    /*var _imageId = req.query.imageid;
+    console.log("calling db for imageid : " + _imageId);
     userImageObj.findOne({
         imageId: _imageId
     }, function (err, s) {
         if (!s) {
+            console.log("error returned");
             res.render("../views/404.vash", {
                 title: "Error",
-                message: "Store does not exist"
+                message: "Image does not exist"
             });
         } else {
-            /*var imageData = s.imageData.substring(22);
+            console.log("image returned");
             res.render("../views/viewimage.vash", {
                 title: "Image",
                 imageData: s.imageData
-            });*/
-            res.redirect(s.imageData);
+            });
+        }
+    });*/
+    res.render("../views/viewimage.vash", {
+        title: "Image"
+    });
+});
+
+app.post("/getImageData", function (req, res) {
+    var _imageId = req.body.ImageId;
+    console.log("calling db for imageid : " + _imageId);
+    userImageObj.findOne({
+        imageId: _imageId
+    }, function (err, s) {
+        if (!s) {
+            console.log("error returned");
+            res.render("../views/404.vash", {
+                title: "Error",
+                message: "Image does not exist"
+            });
+        } else {
+            console.log("image returned");
+            //var imageData = s.imageData.substring(22);
+            return res.status(201).send({
+                imageData: s.imageData
+            });
+            //res.redirect(s.imageData);
         }
     });
 });
