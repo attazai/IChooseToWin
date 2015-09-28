@@ -17,9 +17,15 @@ mainapp.controller("ViewImageController", ['$scope', '$http', function ($scope, 
     };
     $http(reqs)
         .success(function (res) {
-            console.log(res);
-            $scope.imageData = res.imageData;
-
+            //console.log(res);
+            //$scope.imageData = res.imageData;
+            var base64_string = res.imageData;
+            var img = document.createElement("img");
+           img.width = "400px";
+            img.height = "400px";
+            img.src = base64_string;
+            var preview = document.getElementById("img_preview");
+            preview.appendChild(img);
 
         }).error(function (err, status) {
             alert("message:" + " " + err.message + "----" + err.hint);
