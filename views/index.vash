@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="lpapp">
   <head>
 
     <title>@model.title</title>
@@ -168,7 +168,7 @@
               <!--<img src="images/instagram.jpg" alt="">-->
               <!-- SnapWidget -->
               <script src="http://snapwidget.com/js/snapwidget.js"></script>
-              <iframe src="http://snapwidget.com/in/?u=aWNob29zZXRvd2lufGlufDEyNXw4fDN8fG5vfDV8bm9uZXxvblN0YXJ0fG5vfHllcw==&ve=280915" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+              <iframe src="http://snapwidget.com/in/?u=aWNob29zZXRvd2lufGlufDEyNXw1fDN8fG5vfDV8bm9uZXxvblN0YXJ0fG5vfHllcw==&ve=290915" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
             </div>
             <div class="greybox">
 
@@ -241,6 +241,9 @@
                     </li>
                   </ul>
                 </div>
+                <h5 id="loader" style="display:none;">
+                  <i class="fa fa-spinner fa-pulse"></i> Hold on, we are preparing your statement of victory...
+                </h5>
                 <ul class="social-media list-inline text-center" id="social_share" style="display:none;">
                   <li>
                     <a href="javascript:void(0)" download="ichoosetowin" id="download_image">
@@ -284,7 +287,7 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade modal-custom" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade modal-custom email-modal" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -292,9 +295,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body">
-                <input id="to_email_address" placeholder="To Email Address" type="text" class="form-control input-lg" />
-              </div>
-              <div class="modal-footer">
+                <input id="to_email_address" placeholder="(Email Address)" type="text" class="input-lg" />
                 <a class="btn btn-default btn-block" href="javascript:void(0)" id="send_email">
                   <i class="fa fa-share-alt"></i> Send Email
                 </a>

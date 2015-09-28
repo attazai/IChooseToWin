@@ -69,6 +69,7 @@ $(document).ready(function () {
     $("#share_with_world").click(function () {
 
         $("#upload_bg").hide();
+        $("#loader").show();
         $(this).hide();
         //$("#social_share").show();
         $("#start_over").show();
@@ -100,6 +101,7 @@ $(document).ready(function () {
                         $("#pinterest-share-link").attr("href", pinterestHref);
                         $("#fb-share-link").attr("data-fburl", "http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId);
                         $("#social_share").show();
+                        $("#loader").hide();
                         //$("#start_over").show();
                     },
                     error: function (err) {
