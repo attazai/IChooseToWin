@@ -250,11 +250,11 @@
                       <i class="fa fa-desktop"></i>
                     </a>
                   </li>
-                  <li class="share-pinterest">
+                  @*<li class="share-pinterest">
                     <a id="pinterest-share-link" href="" data-pin-do="buttonBookmark" target="_blank">
                         <i class="fa fa-pinterest-p"></i>
                     </a>
-                  </li>
+                  </li>*@
                   <li>
                     <a id="fb-share-link" href="javascript:void(0)" data-fburl="" >
                       <i class="fa fa-facebook-f"></i>
@@ -341,9 +341,7 @@
       <!--  \ footer container / -->
     </section>
     <!--  \ wrapper / -->
-    
-    <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
-
+  
   </body>
   })
 
