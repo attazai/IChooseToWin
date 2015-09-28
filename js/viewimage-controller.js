@@ -1,4 +1,4 @@
-var mainapp = angular.module('ic2w', []);
+﻿var mainapp = angular.module('ic2w', []);
 
 mainapp.controller("ViewImageController", ['$scope', '$http', function ($scope, $http) {
     var _paramImageID = getParameterByName("imageid");
@@ -21,8 +21,8 @@ mainapp.controller("ViewImageController", ['$scope', '$http', function ($scope, 
             //$scope.imageData = res.imageData;
             var base64_string = res.imageData;
             var img = document.createElement("img");
-           img.width = "400px";
-            img.height = "400px";
+           img.width = "400";
+            img.height = "400";
             img.src = base64_string;
             var preview = document.getElementById("img_preview");
             preview.appendChild(img);
