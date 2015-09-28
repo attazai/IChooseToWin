@@ -23,6 +23,17 @@ h5 { margin: 0 0 15px 0; font-size: 30px; color: #a92498; font-family: 'latobold
 h6 { margin: 0 0 15px 0; font-size: 30px; font-family: 'latoblack'; }
 p { font-size: 18px; line-height: 36px; font-family: 'latoregular'; }
 
+.bx-wrapper {
+    -moz-box-shadow: none;
+     -webkit-box-shadow: none; 
+     box-shadow: none;
+    border: none;
+}
+
+.bx-viewport {
+    height:80px !important;
+}
+
 .center { height: 100%; width: 100%; display: table; text-align: center; background: rgba(0,0,0,0.5); }
 .center .middle { display: table-cell; vertical-align: middle; }
 

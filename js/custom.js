@@ -1,6 +1,33 @@
 $(document).ready(function () {
     var _imageDataGlobal = "";
-    $(".range-slider").slider();
+
+    $("#scale_image").slider({
+        value: 100,
+        min: 100,
+        max: 200,
+        step: 1,
+        slide: function (event, ui) {
+            $("#containment").css("background-size", ui.value + "%");
+        }
+    });
+
+    $("#brightness").slider({
+        value: 0.5,
+        min: 0,
+        max: 0.9,
+        step: 0.1,
+        slide: function (event, ui) {
+            $("#brightness_value").css("background-color", "rgba(0,0,0," + ui.value + ")");
+        }
+    });
+
+    $('.rotator').bxSlider({
+        speed: 1500,
+        controls: false,
+        auto: true,
+        easing: 'ease-in-out',
+        pager: true
+    });
 
     $("#share").click(function () {
         var name = $("#name"),
@@ -108,7 +135,7 @@ $(document).ready(function () {
         FB.ui({
             method: 'share',
             href: shareURL
-        }, function (response) {});
+        }, function (response) { });
     });
 
     function postCanvasToFacebook(data) {
