@@ -1,6 +1,7 @@
 //Create an http component
 var http = require('http'); //http is the core node module
 var querystring = require('querystring');
+var fs = require('fs');
 
 //create an express object -- npm install express --save
 var express = require("express");
@@ -22,6 +23,7 @@ mongoose.connect("mongodb://dbadmin:Apple718@ds041673.mongolab.com:41673/ichoose
 app.use(bodyParser.json()); //this will now not handle the multipart stuff
 
 //set public resources
+app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use("/images", express.static(__dirname + "/images"));
 app.use("/js", express.static(__dirname + "/js"));
 app.use("/css", express.static(__dirname + "/css"));
@@ -77,10 +79,20 @@ app.post("/saveImageToDb", function (req, res) {
             //rollbar.handleErrorWithPayloadData(err,{level: "warning", custom: {someKey: "arbitrary value"}} );
             return res.status(500).send(err);
         } else {
-            //console.log("saved to db: " + resObj);
-            return res.status(201).send({
-                imageDetail: resObj
+            _imageData = _imageData.substring(22);
+            fs.writeFile(__dirname + "/uploads/" + _userImageId + ".png", _imageData, "base64", function (err) {
+                if (err) {
+                    console.log(err);
+                    return res.status(500).send(err);
+                } else {
+                    console.log("The file was saved!");
+                    //console.log("saved to db: " + resObj);
+                    return res.status(201).send({
+                        imageDetail: resObj
+                    });
+                }
             });
+
         }
     });
     /*return res.status(201).send({
@@ -132,6 +144,28 @@ app.post("/getImageData", function (req, res) {
                 imageData: s.imageData
             });
             //res.redirect(s.imageData);
+        }
+    });
+});
+
+app.post("/previewImage", function (req, res) {
+    var _imageId = req.body.ImageId;
+    userImageObj.findOne({
+        imageId: _imageId
+    }, function (err, s) {
+        if (!s) {
+            console.log("error returned");
+            res.render("../views/404.vash", {
+                title: "Error",
+                message: "Image does not exist"
+            });
+        } else {
+            console.log("image returned");
+            //var imageData = s.imageData.substring(22);
+            //return res.status(201).send({
+            //    imageData: s.imageData
+            //});
+            res.redirect(s.imageData);
         }
     });
 });

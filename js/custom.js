@@ -97,8 +97,10 @@ $(document).ready(function () {
                     data: userImage,
                     contentType: 'application/json',
                     success: function (res) {
-                        //var pinterestHref = "http://pinterest.com/pin/create/button/?url=http://ictw.azurewebsites.net/index;&media=http://ictw.azurewebsites.net/images/pic.jpg"; //&description={optional URI-encoded description}";
-                        //$("#pinterest-share-link").attr("href", pinterestHref);
+                        var pinURL = encodeURI("http://ictw.azurewebsites.net/index");
+                        var mediaURL = encodeURI("http://ictw.azurewebsites.net/uploads/" + res.imageDetail.imageId + ".png");
+                        var pinterestHref = "http://pinterest.com/pin/create/button/?url=" + pinURL + ";&media=" + mediaURL;
+                        $("#pinterest-share-link").attr("href", pinterestHref);
                         $("#fb-share-link").attr("data-fburl", "http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId);
                         $("#social_share").show();
                         $("#loader").hide();
