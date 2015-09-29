@@ -250,11 +250,11 @@
                       <i class="fa fa-desktop"></i>
                     </a>
                   </li>
-                  @*<li class="share-pinterest">
-                    <a id="pinterest-share-link" href="" data-pin-do="buttonBookmark" target="_blank">
+                  <li class="share-pinterest">
+                    <a id="pinterest-share-link" href="http://pinterest.com/pin/create/button/?url=http://ictw.azurewebsites.net/index;&media=http://ictw.azurewebsites.net/images/pic.jpg" data-pin-do="buttonBookmark" target="_blank">
                         <i class="fa fa-pinterest-p"></i>
                     </a>
-                  </li>*@
+                  </li>
                   <li>
                     <a id="fb-share-link" href="javascript:void(0)" data-fburl="" >
                       <i class="fa fa-facebook-f"></i>
