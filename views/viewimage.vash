@@ -5,17 +5,62 @@
     <title>@model.title</title>
                                                             
     @html.block("style", function(model){
-       
+       <link rel="stylesheet" href="css/global.css">
     })
 </head>
   
     @html.block("body",function(model){
         <body ng-controller="ViewImageController">            
-
-            <div>
-                <img style='display:block; width:400px;height:400px;' id='base64image' ng-src='{{imageData}}' />
+            <!--  / header container \ -->
+            <header id="headerCntr">
+            <!--  / menu box \ -->
+            <nav class="menuBox navbar">
+              <div class="container">
+                <div class="navbar-header">
+                </div>
+              </div>
+            </nav>
+            <!--  \ menu box / -->
+            </header>
+            <!--  \ header container / -->
+            <div id="img_preview" style="padding-left:35%; width:100%;height:400px;">
+                @*<img style='display:block; width:400px;height:400px;' id='base64image' ng-src='{{imageData}}' />*@
             </div>
           
+          <!--  / footer container \ -->
+          <footer id="footerCntr" class="container-fluid">
+
+            <div class="row">
+              <div class="col-sm-6">
+                <p>&copy; 2014 I Choose To Win, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6 text-right">
+                <ul class="list-inline">
+                  <li>
+                    <a href="https://twitter.com/Ichoosewinning" target="_blank">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/ichoosetowin.org" target="_blank">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://instagram.com/ichoosetowin/" target="_blank">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/i-choose-to-win" target="_blank">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+          <!--  \ footer container / -->
         </body>
     })
     

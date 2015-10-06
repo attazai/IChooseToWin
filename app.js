@@ -50,6 +50,12 @@ var smtpTransport = nodemailer.createTransport({
     }
 });
 
+app.get("/", function (req, res) {
+    res.render("../views/index.vash", {
+        title: "IChooseToWin"
+    });
+});
+
 app.get("/index", function (req, res) {
     res.render("../views/index.vash", {
         title: "IChooseToWin"
