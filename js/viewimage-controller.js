@@ -1,3 +1,5 @@
+//This dile is no more in use
+
 var mainapp = angular.module('ic2w', []);
 
 mainapp.controller("ViewImageController", ['$scope', '$http', function ($scope, $http) {

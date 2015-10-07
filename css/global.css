@@ -220,6 +220,56 @@ p {
     font-family: 'league_gothicregular';
 }
 
+.container-1 p {
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container-1 h1 {
+    font-size: 95px;
+    letter-spacing: 19px;
+}
+
+.container-1 img {
+    display: block;
+    margin: 50px auto;
+}
+
+.container-1 .social-media {
+    letter-spacing: normal;
+    line-height: 0;
+}
+
+    .container-1 .social-media li {
+        padding: 0;
+        letter-spacing: normal;
+    }
+
+        .container-1 .social-media li a {
+            letter-spacing: normal;
+        }
+
+.container-1 .create {
+    background-color: #464c50;
+    color: #fff;
+    letter-spacing: normal;
+    font-size: 24px;
+    text-transform: initial;
+    padding: 13px 50px;
+    border-radius: 3px;
+    font-family: latoregular;
+    line-height: 0;
+}
+
+    .container-1 .create:hover,
+    .container-1 .create:focus,
+    .container-1 .create:active {
+        text-decoration: none;
+        background-color: #25292b;
+    }
+
 .carousel-indicators {
     position: static;
     margin: 20px 0;
