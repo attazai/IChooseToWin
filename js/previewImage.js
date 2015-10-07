@@ -22,6 +22,7 @@ $(document).ready(function () {
             var preview = document.getElementById("img_preview");
             $("#loader").css("display", "none");
             preview.appendChild(img);
+            $("#download-li").show();
             $("#envelope-li").show();
         },
         error: function (err) {
@@ -29,6 +30,11 @@ $(document).ready(function () {
 
         }
     });
+
+    $("#download_image").click(function () {
+        $(this).attr("href", _imageDataGlobal);
+    });
+
 
     function setShareButtonAttributes(imageId) {
         $("#fb-share-link").attr("data-fburl", "http://ictw.azurewebsites.net/loadImage?imageid=" + imageId);

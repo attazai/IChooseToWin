@@ -60,7 +60,7 @@
                                 </h5>
                             </div>
                             <ul class="social-media list-inline text-center" id="social_share">
-                                <li>
+                                <li id="download-li" style="display:none;">
                                     <a href="javascript:void(0)" download="ichoosetowin" id="download_image">
                                         <i class="fa fa-desktop"></i>
                                     </a>
