@@ -62,6 +62,13 @@ app.get("/index", function (req, res) {
     });
 });
 
+
+app.get("/terms", function (req, res) {
+    res.render("../views/terms.vash", {
+        title: "Terms & Conditions"
+    });
+});
+
 app.post("/saveImageToDb", function (req, res) {
     //console.log(req.body);
     var _userImageId = uuid.v4();
