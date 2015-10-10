@@ -116,40 +116,19 @@
               <h4 class="text-center">loving God completely, myself correctly and others compassionately.</h4>
             </li>
             <li>
-              <h4 class="text-center">Trusting and obeying God's Word, standing on His promises and responding to His promptings.</h4>
+              <h4 class="text-center">Trusting God's Word, standing on His promises and obeying His commands.</h4>
             </li>
             <li>
-              <h4 class="text-center">Living out loud and on purpose.</h4>
+              <h4 class="text-center">Unleashing my God-given gifts to positively impact the world.</h4>
             </li>
             <li>
-              <h4 class="text-center">Being bold, brave and brilliant for God's glory.</h4>
+              <h4 class="text-center">Being unapologetically me: bold, brave and brilliant for God's glory!</h4>
             </li>
             <li>
-              <h4 class="text-center">Being unapologetically me!</h4>
+              <h4 class="text-center">Saying I'm done to anything and anyone holding me back.</h4>
             </li>
             <li>
               <h4 class="text-center">Courage in action.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">Serving others with the gifts given to me.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">Saying I'm done to everything and everyone holding me back.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">Saying "yes" to the potential that lives in me.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">Giving myself permission to enjoy the fullness of Christ.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">living victoriously before victory is fully realized.</h4>
-            </li>
-            <li>
-              <h4 class="text-center">What every woman of faith should experience daily!</h4>
-            </li>
-            <li>
-              <h4 class="text-center">Grabbing life by the horns.</h4>
             </li>
           </ul>
 
@@ -183,7 +162,7 @@
                     data-il-show-heading="false"
                     data-il-scroll="false"
                     data-il-width="100%"
-                    data-il-height="350px"
+                    data-il-height="800px"
                     data-il-image-size="large"
                     data-il-bg-color="#285989"
                     data-il-content-bg-color="#F8F8F8"
@@ -194,7 +173,7 @@
             <div class="greybox">
 
               <div class="left">
-                <img src="images/pic1.jpg" alt="">
+                <img src="images/pic3.jpg" alt="">
                   <img src="images/pic2.jpg" alt="">
                             </div>
               <div class="right">
@@ -204,6 +183,9 @@
                 <p>It’s a clear announcement of one’s expectation in life. Winning begins with a choice, and is followed by an attitude and accompanied by action. It’s accepting the responsibility for whatever is required – including seeing myself as a winner capable of doing great things to positively impact the world. Let’s start a movement – women who are winning!  </p>
                 <p>
                   Today, own your victory. Let’s remind the world who you are, whose you are – and what you choose to do. Let’s flood social media with positive images of women who will NOT give up, nor give in, but women who, in life, choose to win!  #Ichoosetowin
+                </p>
+                <p>
+                    To learn more about I Choose To Win, the non-profit organization, visit ichoosetowin.org
                 </p>
               </div>
             </div>
@@ -295,7 +277,7 @@
                     <a id="twitter-share-link" href="https://twitter.com/share" class="twitter-share-button" data-url="" data-count="none" data-hashtags="ichoosetowin" data-dnt="true">Tweet</a>
                   </li>
                 </ul>
-                 <span id="terms-chk-container" style="display:none;"><input type="checkbox" id="terms-chk" checked  />I agree to the ICTW terms</span>
+                 <span id="terms-chk-container" style="display:none;"><input type="checkbox" id="terms-chk" checked  /><a href="/terms">I agree to the ICTW terms</a></span>
                 <a class="btn btn-default btn-block" href="javascript:void(0)" id="upload_bg">
                   <i class="custom-icon camera"></i> upload a photo
                 </a>
