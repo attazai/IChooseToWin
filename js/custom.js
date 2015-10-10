@@ -102,6 +102,8 @@ $(document).ready(function () {
                         var pinterestHref = "http://pinterest.com/pin/create/button/?url=" + pinURL + ";&media=" + mediaURL;
                         $("#pinterest-share-link").attr("href", pinterestHref);
                         $("#fb-share-link").attr("data-fburl", "http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId);
+                        $("#twitter-share-link").attr("data-url", "http://ictw.azurewebsites.net/loadImage?imageid=" + res.imageDetail.imageId);
+                        $("#terms-chk-container").show();
                         $("#social_share").show();
                         $("#loader").hide();
                         //$("#start_over").show();
@@ -116,7 +118,11 @@ $(document).ready(function () {
     });
 
     $("#download_image").click(function () {
-        $(this).attr("href", sessionStorage.getItem('data_image'));
+        if ($("#terms-chk").is(':checked')) {
+            $(this).attr("href", sessionStorage.getItem('data_image'));
+        } else {
+            alert("Please check terms and condtion checkbox");
+        }
     });
 
     function setBgImage(input) {
@@ -133,13 +139,17 @@ $(document).ready(function () {
     }
 
     $("#fb-share-link").click(function () {
-        var shareURL = $(this).attr("data-fburl");
-        //postCanvasToFacebook(shareURL);
-        console.log(shareURL);
-        FB.ui({
-            method: 'share',
-            href: shareURL
-        }, function (response) {});
+        if ($("#terms-chk").is(':checked')) {
+            var shareURL = $(this).attr("data-fburl");
+            //postCanvasToFacebook(shareURL);
+            console.log(shareURL);
+            FB.ui({
+                method: 'share',
+                href: shareURL
+            }, function (response) {});
+        } else {
+            alert("Please check terms and condtion checkbox");
+        }
     });
 
     function postCanvasToFacebook(data) {
@@ -154,9 +164,12 @@ $(document).ready(function () {
     }
 
     $("#show_email_modal").click(function () {
-        $("#myModal").modal("hide");
-
-        $("#myModal2").modal("show");
+        if ($("#terms-chk").is(':checked')) {
+            $("#myModal").modal("hide");
+            $("#myModal2").modal("show");
+        } else {
+            alert("Please check terms and condtion checkbox");
+        }
     });
 
     $("#send_email").click(function () {

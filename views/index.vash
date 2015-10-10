@@ -7,13 +7,14 @@
 
     @html.block("style", function(model){
     <link rel="stylesheet" href="js/lib/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="js/lib/bxslider-4/dist/jquery.bxslider.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link href="js/lib/instalink/instalink-1.7.0.min.css" rel="stylesheet"> 
+      <link rel="stylesheet" href="js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="js/lib/bxslider-4/dist/jquery.bxslider.min.css">
+          <link rel="stylesheet" href="css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/jquery-ui.css">
+              <link rel="stylesheet" href="css/fonts.css">
+                <link rel="stylesheet" href="css/global.css">
+          
+<link href="js/lib/instalink/instalink-1.7.0.min.css" rel="stylesheet"> 
 
        
     })
@@ -21,6 +22,8 @@
 
   @html.block("body",function(model){
   <body>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              
     <div id="fb-root"></div>
     <script>
       console.log("initializing FB");
@@ -167,6 +170,10 @@
         <article class="textBox">
           <div class="container-fluid">
             <div class="instagram">
+                <!--<img src="images/instagram.jpg" alt="">-->
+                <!-- SnapWidget -->
+                @*<script src="http://snapwidget.com/js/snapwidget.js"></script>
+                <iframe src="http://snapwidget.com/in/?u=aWNob29zZXRvd2lufGlufDEyNXw1fDN8fG5vfDV8bm9uZXxvblN0YXJ0fG5vfHllcw==&ve=290915" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>*@
                 <!-- instalink plugin -->
                 <div data-il 
                     data-il-client-id="60df6e69f45a4abfba4aa8436c2c2f11"
@@ -284,7 +291,11 @@
                       <i id="show_email_modal" class="fa fa-envelope"></i>
                     </a>
                   </li>
+                  <li>
+                    <a id="twitter-share-link" href="https://twitter.com/share" class="twitter-share-button" data-url="" data-count="none" data-hashtags="ichoosetowin" data-dnt="true">Tweet</a>
+                  </li>
                 </ul>
+                 <span id="terms-chk-container" style="display:none;"><input type="checkbox" id="terms-chk" checked  />I agree to the ICTW terms</span>
                 <a class="btn btn-default btn-block" href="javascript:void(0)" id="upload_bg">
                   <i class="custom-icon camera"></i> upload a photo
                 </a>
@@ -368,7 +379,6 @@
   <script src="js/lib/jquery-ui/jquery-ui.js"></script>
   <script src="js/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.js"></script>
   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-
   <script src="js/custom.js"></script>
 
   })
