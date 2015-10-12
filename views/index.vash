@@ -151,8 +151,8 @@
             <div class="instagram">
                 <!--<img src="images/instagram.jpg" alt="">-->
                 <!-- SnapWidget -->
-                @*<script src="http://snapwidget.com/js/snapwidget.js"></script>
-                <iframe src="http://snapwidget.com/in/?u=aWNob29zZXRvd2lufGlufDEyNXw1fDN8fG5vfDV8bm9uZXxvblN0YXJ0fG5vfHllcw==&ve=290915" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>*@
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?h=aWNob29zZXRvd2lufGlufDI5MHw0fDZ8fG5vfDV8ZmFkZUlufG9uU3RhcnR8bm98eWVz&ve=121015" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
                 <!-- instalink plugin -->
                 <div data-il 
                     data-il-client-id="60df6e69f45a4abfba4aa8436c2c2f11"
@@ -174,7 +174,7 @@
 
               <div class="left">
                 <img src="images/pic3.jpg" alt="">
-                  <img src="images/pic2.jpg" alt="">
+                  <img src="images/ichooselogo.png" alt="">
                             </div>
               <div class="right">
                 <h3>who we are</h3>
